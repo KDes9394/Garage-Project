@@ -16,10 +16,18 @@ class ParkingGarage():
       run()
     def payforParking():
       if ParkingGarage.currentTicket['Ticket'] == "True":
-        print("please pay")
-        continue
+        variable = int(input ("Please pay your parking fee. "))
+          if variable >= 1:
+            ParkingGarage.currentTicket["Ticket"] = "False"
+            if variable < 1 :
+               variable = int(input ("PLEASE enter a real number to pay for parking fee. PLEASE "))
+            ParkingGarage.currentTicket["Ticket"] = "False"
+      else: 
+        print('You have not parked yet, please input "Park"')
+        run()
+        
     def LeaveGarage():
-      if ParkingGarage.currentTicket[Ticket] == "True":
+      if ParkingGarage.currentTicket['Ticket'] == "False":
         print("Thank you, have a nice day!")
       else:
         ParkingGarage.payforParking()
@@ -30,13 +38,15 @@ class ParkingGarage():
 def run():
   new_occupant = ParkingGarage()
   while True:
-    response = input("What would you like to do?: Park/Leave/Spots? ").lower()
+    response = input("What would you like to do?: Park/Pay/Leave/Spots? ").lower()
     if response == 'park':
       ParkingGarage.taketicket()
+    if response == 'pay':
+      ParkingGarage.payforParking()
     if response == 'leave':
       ParkingGarage.LeaveGarage()
     if response == 'spots':
-      print(f'(There is {len(ParkingGarage.ticket)} tickets and {len(ParkingGarage.parkingspace)} spots left'))
+      print(f'(There is {len(ParkingGarage.ticket)} tickets and {len(ParkingGarage.parkingspace)} spots left)')
   
 
 run() 
