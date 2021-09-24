@@ -1,7 +1,17 @@
+from IPython.display import clear_putput
+
 class ParkingGarage():
-    ticket = 15
-    parkingspace = 15
+    currentTicket = {ticket: pass,
+    status: pass
+    }
+    ticket = []
+    parkingSpace = [1, 2, 3, 4, 5]
     currentTicket = {}
+   
+    
+  
+#status = available, unpaid, 
+
 
 #Extra - sorry we're full 
     def __init__(self, ticket, parkingspace):
@@ -11,19 +21,33 @@ class ParkingGarage():
     def taketicket():
       ParkingGarage.ticket -= 1
       ParkingGarage.parkingspace -= 1
+      currentTicket['1'] = 'occupied'
+      print("Your parking space is {""} )
 
     def payforParking():
-     # totalticket = int(input("How many tickets would you like?"))
-      print("your ticket has been paid. You have 15mins to leave")
-      #currentTicket += 1
+      if 'occupied' 
+      totalticket = int(input("Please insert any number for payment"))
+        while True:
+          currentTicket[ticket] = ['available']
+          print("your ticket has been paid. You have 15mins to leave")
+          ParkingGarage.currentTicket = 'available'
+        else: 
+          print("Please enter an amount in order to leave.")
 
     def LeaveGarage():
-      #if ticket == True:
-      #Print("Thank you, have a nice day!")
-      ParkingGarage.parkingspace += 1
-      ParkingGarage.ticket += 1
+      if ParkingGarage.status = 'available':
+        Print("Thank you, have a nice day!")
+        ParkingGarage.parkingspace += 1
+        ParkingGarage.ticket += 1
+      else: 
+        return payForParking()
 
-new_occupant = ParkingGarage(1, 1)
+
+
+
+new_occupant.taketicket()
+new_occupant.payforParking()
+new_occupant.LeaveGarage()
 #if ParkingGarage.ticket and ParkingGarage.parkingspace == 1:
   #print("Sorry we're full. Have a nice day!")
 
