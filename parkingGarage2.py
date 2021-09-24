@@ -12,23 +12,29 @@ class ParkingGarage():
       ParkingGarage.ticket.pop()
       ParkingGarage.parkingspace.pop()
       ParkingGarage.currentTicket["Ticket"] = "True"
-      print("thank you")
+      print("Here is your ticket.")
       run()
     def payforParking():
-      if ParkingGarage.currentTicket['Ticket'] == "True":
+      if ParkingGarage.currentTicket["Ticket"] == "True":
         variable = int(input ("Please pay your parking fee. "))
-          if variable >= 1:
-            ParkingGarage.currentTicket["Ticket"] = "False"
-            if variable < 1 :
-               variable = int(input ("PLEASE enter a real number to pay for parking fee. PLEASE "))
-            ParkingGarage.currentTicket["Ticket"] = "False"
+        if variable >= 1:
+          ParkingGarage.currentTicket["Ticket"] = "False"
+        if variable < 1 :
+          variable2 = int(input ("PLEASE enter a real number to pay for parking fee. PLEASE "))
+          if variable2 == 0:
+            print("Security is on it's way")
+        run()
       else: 
         print('You have not parked yet, please input "Park"')
         run()
         
     def LeaveGarage():
-      if ParkingGarage.currentTicket['Ticket'] == "False":
+      if ParkingGarage.currentTicket == {}:
+        print("Sorry to see you go")
+      elif ParkingGarage.currentTicket["Ticket"] == "False":
         print("Thank you, have a nice day!")
+         #ParkingGarage.ticket.append(max(ParkingGarage.ticket, + 1))
+         #ParkingGarage.parkingspace.append(max(ParkingGarage.parkingspace, +1))
       else:
         ParkingGarage.payforParking()
 
@@ -55,6 +61,5 @@ run()
   #print("Sorry we're full. Have a nice day!")
 
 #currentTicket -dictionary key == True when 
-
 
 
