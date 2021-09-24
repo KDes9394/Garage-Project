@@ -14,9 +14,9 @@ class ParkingGarage():
 
 
 #Extra - sorry we're full 
-    def __init__(self, ticket, parkingspace):
-      self.ticket = ticket
-      self.parkingspace = parkingspace
+    # def __init__(self):
+    #   self.ticket = ticketgit
+    #   self.parkingspace = parkingspace
        
     def taketicket():
       ParkingGarage.ticket -= 1
@@ -53,4 +53,5 @@ new_occupant.LeaveGarage()
 
 #currentTicket -dictionary key == True when 
 
-#Leave Garage
+
+
