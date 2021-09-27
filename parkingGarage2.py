@@ -21,11 +21,11 @@ class ParkingGarage():
           print('You have not parked yet, please input "Park"')
           run()
       if ParkingGarage.currentTicket["Ticket"] == "True":
-        variable = int(input ("Please pay your parking fee. "))
+        variable = float(input ("Please pay your parking fee. "))
         if variable >= 1:
             ParkingGarage.currentTicket["Ticket"] = "False"
         if variable < 1 :
-            variable2 = int(input ("PLEASE enter a real number to pay for parking fee. PLEASE "))
+            variable2 = float(input ("PLEASE enter a real number to pay for parking fee. PLEASE "))
             if variable2 == 0:
               print("Security is on it's way")
       run()
